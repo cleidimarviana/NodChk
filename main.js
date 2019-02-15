@@ -2,10 +2,10 @@
 var express = require('express');
 var app = express();
 const request = require('request');
-app.get('/:ufplaca', function (req, res) {
+app.get('/', function (req, res) {
     res.writeHead(200, { "Content-Type": "text/html" });
 
-    const str = req.params.ufplaca;
+    const str = req.query.ufplaca;
     const _plac = str.substr(0, 7);
     const _uf = str.substr(7, 9);
 
